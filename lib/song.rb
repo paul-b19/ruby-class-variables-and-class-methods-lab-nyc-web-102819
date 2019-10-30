@@ -33,7 +33,7 @@ class Song
   def self.genre_count
     hash = {}
     self.genres.each do |i|
-      hash[i] = @@genres.select{|i| i}.length
+      hash[i] = @@genres.select{|ii| ii == i}.length
     end
     hash
     #binding.pry
