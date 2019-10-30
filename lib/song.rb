@@ -36,11 +36,14 @@ class Song
       hash[i] = @@genres.select{|ii| ii == i}.length
     end
     hash
-    #binding.pry
   end
   
   def self.artist_count
-    
+    hash = {}
+    self.artists.each do |i|
+      hash[i] = @@artists.select{|ii| ii == i}.length
+    end
+    hash
   end
   
 end
