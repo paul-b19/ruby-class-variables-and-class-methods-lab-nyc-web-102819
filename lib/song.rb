@@ -31,13 +31,11 @@ class Song
   end
   
   def self.genre_count
-    ar = self.genres 
     hash = {}
-    ar.each do |i|
-      hash[i] = 0;
+    self.genres.each do |i|
       hash[i] = @@genres.select{|i| i}.length
     end
-    binding.pry
+    hash
   end
   
   def self.artist_count
