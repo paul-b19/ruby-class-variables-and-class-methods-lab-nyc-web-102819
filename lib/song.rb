@@ -36,6 +36,7 @@ class Song
       hash[i] = @@genres.select{|i| i}.length
     end
     hash
+    binding.pry
   end
   
   def self.artist_count
