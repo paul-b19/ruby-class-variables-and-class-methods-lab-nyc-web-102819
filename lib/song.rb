@@ -29,11 +29,15 @@ class Song
   end
   
   def self.genre_count
-    self.genres.count
+    ar = self.genres 
+    hash = {}
+    ar.each do |i|
+      hash[i] = @@genres.find_all(i).count
+    end
   end
   
   def self.artist_count
-    self.artists.count
+    
   end
   
 end
