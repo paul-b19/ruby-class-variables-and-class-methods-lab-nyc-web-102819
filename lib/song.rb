@@ -32,6 +32,7 @@ class Song
     ar = self.genres 
     hash = {}
     ar.each do |i|
+      hash[i] = 0;
       hash[i] = @@genres.select{|i| i}.length
     end
   end
