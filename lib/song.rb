@@ -32,7 +32,7 @@ class Song
     ar = self.genres 
     hash = {}
     ar.each do |i|
-      hash[i] = @@genres.select{|i| i}.count
+      hash[i] = @@genres.select!{|i| i}.count
     end
   end
   
